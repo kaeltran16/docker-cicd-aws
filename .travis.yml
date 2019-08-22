@@ -7,11 +7,11 @@ script:
   - docker run -e CI=true cktran16x2/docker-front-end npm run test -- --coverage
 deploy:
   provider: elasticbeanstalk
-  region: "us-east-2"
-  app: "docker-cicd-aws"
-  env: "DockerCicdAws-env"
-  bucket_name: "arn:aws:s3:::elasticbeanstalk-us-east-2-053474625768"
-  bucket_path: "docker-cicd-aws"
+  region: us-east-2
+  app: docker-cicd-aws
+  env: DockerCicdAws-env
+  bucket_name: arn:aws:s3:::elasticbeanstalk-us-east-2-053474625768
+  bucket_path: docker-cicd-aws
   on:
     branch: master
   access_key_id:
