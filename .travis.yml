@@ -4,4 +4,4 @@ services:
 before_install:
   - docker build -t cktran16x2/docker-front-end -f Dockerfile.dev .
 script:
-  - docker run -e CI=true cktran16x2/docker npm run test -- --coverage
+  - docker run -e CI=true cktran16x2/docker-front-end npm run test -- --coverage
