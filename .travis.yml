@@ -6,15 +6,15 @@ before_install:
 script:
   - docker run -e CI=true cktran16x2/docker-front-end npm run test -- --coverage
 deploy:
-  provider: elasticbeanstalk
-  region: us-east-2
-  app: docker-cicd-aws
-  env: DockerCicdAws-env
-  bucket_name: arn:aws:s3:::elasticbeanstalk-us-east-2-053474625768
-  bucket_path: docker-cicd-aws
+  provider: "elasticbeanstalk"
+  region: "us-east-2"
+  app: "docker-cicd-aws"
+  env: "DockerCicdAws-env"
+  bucket_name: "arn:aws:s3:::elasticbeanstalk-us-east-2-053474625768"
+  bucket_path: "docker-cicd-aws"
   on:
-    branch: master
+    branch: "master"
   access_key_id:
-    secure: $AWS_ACCESS_KEY
+    secure: "$AWS_ACCESS_KEY"
   secret_access_key:
-    secure: $AWS_SECRET_KEY
+    secure: "$AWS_SECRET_KEY"
