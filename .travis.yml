@@ -2,6 +2,6 @@ sudo: required
 services:
   - docker
 before_install:
-  - docker build -t cktran16x2/docker-front-end -f Dockerfile.dev
+  - docker build -t cktran16x2/docker-front-end -f Dockerfile.dev .
 script:
   - docker run -e CI=true cktran16x2/docker npm run test -- --coverage
