@@ -10,7 +10,7 @@ deploy:
   region: "us-east-2"
   app: "docker-cicd-aws"
   env: "DockerCicdAws-env"
-  bucket_name: "arn:aws:s3:::elasticbeanstalk-us-east-2-053474625768"
+  bucket_name: "elasticbeanstalk-us-east-2-053474625768"
   bucket_path: "docker-cicd-aws"
   on:
     branch: "master"
